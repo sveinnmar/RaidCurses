@@ -1,0 +1,26 @@
+{% from "components/cmp.njk" import Cmp %}
+{% from "sections/header.njk" import Header %}
+{% from "sections/footer.njk" import Footer %}
+<!doctype html>
+<html lang="is">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Vettvangur">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    {# {{ MetaTags() }}
+    {{ FavIcons() }} #}
+    {# <link rel="stylesheet" type="text/css" href="https://localhost:9000/styles.css"> #}
+    <title>
+      {{ page.title }}
+    </title>
+  </head>
+    <body class="body preload">
+      <div class="layout__cover"></div>
+      {{ Header() }}
+      {% block Content %}{% endblock %}
+      {{ Footer() }}
+    {# <script src="https://localhost:9000/styles.js"></script>
+    <script src="https://localhost:9000/main.js"></script> #}
+  </body>
+</html>

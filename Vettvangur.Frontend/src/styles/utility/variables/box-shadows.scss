@@ -1,0 +1,7 @@
+$box-shadows: (
+  reset: 0 0 0 rgba(0, 0, 0, 0),
+);
+
+@function box-shadow($key) {
+	@return map-get($box-shadows, $key);
+}
